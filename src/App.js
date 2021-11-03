@@ -1,22 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
-
-// const NavigationBar = () => {
-
-// }
+import Hero from './components/Hero';
+import NavigationBar from './components/NavigationBar';
 
 const App = () => {
   return (
     <div className="App">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <header>
-          <nav>
-            <ul>
-              <li>Home</li>
-              <li>Profile</li>
-            </ul>
-          </nav>
-        </header>
+        <NavigationBar/>
+        <Hero/>
     </div>
   );
 }
