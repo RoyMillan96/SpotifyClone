@@ -1,23 +1,23 @@
 import { useState } from 'react'
-// import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import "./SignUpForm.css";
 
 const SignUpForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    // const auth = useAuth();
+    const auth = useAuth();
 
     return (
         <div className="container">
             <form
                 onSubmit={(event) => {
                 event.preventDefault();
-                // auth.signup({
-                //     email,
-                //     password,
-                //     // callback: () => history.push(WEB_APP),
-                // });
+                auth.signup({
+                    email,
+                    password,
+                    // callback: () => history.push(WEB_APP),
+                });
                 setEmail("");
                 setPassword("");
                 }}

@@ -13,6 +13,9 @@ const NavigationBar = () => {
                 <Link to={Routes.SIGN_UP}>
                     <li>Sign Up</li>
                 </Link>
+                <Link to={Routes.LOGIN}>
+                    <li>login</li>
+                </Link>
             </ul>
             </nav>
         </header>
