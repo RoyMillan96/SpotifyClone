@@ -1,10 +1,13 @@
 import { useState } from 'react'
+import { useHistory } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { WEB_APP } from "../../constants/routes";
 import "./SignUpForm.css";
 
 const SignUpForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const history = useHistory();
 
     const auth = useAuth();
 
@@ -16,7 +19,7 @@ const SignUpForm = () => {
                 auth.signup({
                     email,
                     password,
-                    // callback: () => history.push(WEB_APP),
+                    callback: () => history.push(WEB_APP),
                 });
                 setEmail("");
                 setPassword("");
